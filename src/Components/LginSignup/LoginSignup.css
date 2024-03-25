@@ -2,26 +2,25 @@
     display:flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 100px;
+    margin-bottom: 200px;
     align-items: center;
-    background-color: beige;
-    padding-bottom: 30px;
+    background-color:azure;
+    width: 600px;
+    
+
    
 }
 .header{
     display:flex;
     flex-direction: column;
     align-items: center;
-    gap: 9px;
-    width: 100%;
-    margin-top: 30px;
 }
 .inputs{
-
-    margin-top: 55px;
+    margin-top: 40px;
     display:flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
     
 }
 
@@ -34,11 +33,45 @@
     display: flex;
     align-items: center;
     margin: auto;
-    width: 480px;
-    height: 80px;
+    width: 400px;
+    height: 60px;
     background-color: aquamarine;
     border-radius: 6px;
 }
 .input img{
     margin: 0px 30px;
+}
+input input{
+    height: 70px;
+    width: 400px;
+    background: transparent;
+    border:none;
+    outline: none;
+    color:aquamarine;
+    font-size: 19px;
+}
+.forgot{
+   
+    margin-top: 27px;
+    color:#7979;
+    font-size: 18px;
+   
+}
+.sumbit-container{
+    display: flex;
+    gap:200px;
+    margin: 30px auto;
+}
+.sumbit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color:aliceblue;
+    background: brown;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor:pointer;
 }

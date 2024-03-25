@@ -13,19 +13,19 @@ const LoginSignup = () => {
             <div className="inputs">
             <div className="input">
                 <img src={user_icon} alt=""></img>
-                <input type="text"></input>
+                <input type="text" placeholder="Name"></input>
             </div>
 
             <div className="input">
                 <img src={email_icon} alt=""></img>
-                <input type="email"></input>
+                <input type="email" placeholder="E-mail"></input>
             </div>
 
             <div className="input">
                 <img src={password_icon} alt=""></img>
-                <input type="password"></input>
+                <input type="password" placeholder="Password"></input>
             </div>
-            <div className="forgot">Forgot password<span>  Click here </span></div>
+            <div className="forgot">Forgot password?<span>  Click here </span></div>
             <div className="sumbit-container">
                 <div className="submit">Sign Up</div>
                 <div className="submit">Login</div>
