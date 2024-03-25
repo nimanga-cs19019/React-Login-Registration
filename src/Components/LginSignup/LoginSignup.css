@@ -41,13 +41,13 @@
 .input img{
     margin: 0px 30px;
 }
-input input{
+.input input{
     height: 70px;
     width: 400px;
     background: transparent;
     border:none;
     outline: none;
-    color:aquamarine;
+    color:black;
     font-size: 19px;
 }
 .forgot{
@@ -62,16 +62,20 @@ input input{
     gap:200px;
     margin: 30px auto;
 }
-.sumbit{
+.submit{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
-    height: 59px;
+    width: 100px;
+    height: 30px;
     color:aliceblue;
     background: brown;
     border-radius: 50px;
     font-size: 19px;
-    font-weight: 700;
+   
     cursor:pointer;
+}
+.gray{
+    background: #eaeaea;
+    color: #676767;
 }
