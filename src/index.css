@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://www.wylerindustrial.com/wp-content/uploads/2020/03/AdobeStock_304474910-1024x683.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
