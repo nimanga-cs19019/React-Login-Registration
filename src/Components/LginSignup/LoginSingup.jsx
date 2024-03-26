@@ -1,13 +1,14 @@
 import React, { useRef, useState , useEffect, useContext } from "react"
-import AuthContext  from "../../context/AuthProvider"
 import "./LoginSignup.css"
 import user_icon from "../Assets/icons8-person-24.png"
 import email_icon from "../Assets/icons8-email-30.png"
 import password_icon from "../Assets/icons8-password-26.png"
-import axios from "../../API/axios"
-const LOGIN_URL ='/auth';
+import AuthContext  from "../../context/AuthProvider"
+import axios from "axios"
+
+const LOGIN_URL = "/auth";
 const LoginSignup = () => {
-    const{ setAuth } = useContext(AuthContext);
+    const {setAuth} = useContext(AuthContext);
     const[action,setAction]=useState("Sign Up");
 
     const userRef = useRef();
@@ -37,13 +38,15 @@ const LoginSignup = () => {
             }
             );
             console.log(JSON.stringify(response?.data));
-           // console.log(JSON.stringify(response));
-           const accessToken = response?.data?.accessToken;
-           const roles = response?.data?.roles;setAuth({user,pwd,roles,accessToken});
+            //console.log(JSON.stringify(response));
+            const accessToken = response?.data?.accessToken;
+            const roles = response?.data?.roles;
+            setAuth({user,pwd,roles,accessToken});
             setuser('');
             setemail('');
             setPwd('');
             setSuccess(true);
+           
         }catch(err)
         {
              if(!err?.response){
@@ -55,16 +58,18 @@ const LoginSignup = () => {
             }else{
                 setErrMsg('LoginFaiiled');
             }
-       err.current.focus();
-       
+            errRef.current.focus();
+       }
+        
     }
-
+      
+      
     return(<>
-        {success ?(<div onSubmit={hadleSubmit}>
+        {success ?(<div>
             <h1>You are logged in!</h1>
             <p a href="">Go to home</p>
         </div>):(
-        <div className="container" >
+        <div className="container" onSubmit={hadleSubmit} >
             <section>
              <p ref={errRef} className={errMsg?"errmsg":"offscreen"} aria-live="assertive">{errMsg}</p>   
             </section>
@@ -76,7 +81,7 @@ const LoginSignup = () => {
             {action==="Login"?<div>
                </div>:<div className="input">
                 <img src={user_icon} alt=""></img>
-                <input type="text" placeholder="Name" ref={userRef} autoComplete="off" onChange={(e)=>setuser(e.target.value)} value={user} required></input>
+                <input type="text" placeholder="Name" ref={userRef} autoComplete="off" onChange={(e)=>setuser(e.target.value)} value={user} ></input>
             </div>
 }
             
@@ -96,11 +101,11 @@ const LoginSignup = () => {
                     Sign Up
                     </div>
                 <div className={action === "Sign up"?"submit gray":"submit"}onClick={()=>{setAction("Login")}} >
-                  <a href="https://www.canva.com/projects" > Login</a></div>
+                  <a href="" > Login</a></div>
             </div>
             </div>
         </div>)}</>
     )
 }
-}
+
 export default LoginSignup;
