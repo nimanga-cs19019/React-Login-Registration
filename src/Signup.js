@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect ,useContext } from "react";
-import LoginSignup from "./Components/LginSignup/LoginSingup";
+//import LoginSignup from "./Components/LginSignup/LoginSingup";
 import AuthContext from "./context/AuthProvider";
-import axios from "./api/axios";
+//import axios from "./api/axios";
 //const LOGIN_URL ='/auth';
 
 const Signup = ()=>{
